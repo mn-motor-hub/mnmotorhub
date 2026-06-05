@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   description:
     'La mayor variedad de autopartes y accesorios en Venezuela. Calidad profesional garantizada para carros y motos.',
   icons: {
-    icon: [{ url: '/images/logo.png', type: 'image/png' }],
+    icon: [{ url: '/images/logo.svg', type: 'image/svg+xml' }],
+    shortcut: '/images/logo.svg',
     apple: '/images/logo.png',
-    shortcut: '/images/logo.png',
   },
 }
 

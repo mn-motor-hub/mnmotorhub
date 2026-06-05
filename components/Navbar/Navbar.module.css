@@ -12,9 +12,8 @@
   align-items: center;
   justify-content: space-between;
   height: 88px;
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--spacing-gutter);
+  width: 100%;
+  padding: 0 var(--spacing-edge);
 }
 
 @media (min-width: 768px) {

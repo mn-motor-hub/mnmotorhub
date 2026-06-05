@@ -9,9 +9,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-gutter);
-  padding: var(--spacing-section) var(--spacing-gutter);
-  max-width: var(--container-max);
-  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-section) var(--spacing-edge);
 }
 
 @media (min-width: 768px) {
@@ -123,9 +122,8 @@
 }
 
 .bottom {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: var(--spacing-gutter) var(--spacing-gutter);
+  width: 100%;
+  padding: var(--spacing-gutter) var(--spacing-edge);
   border-top: 1px solid rgba(92, 64, 55, 0.3);
 }
 

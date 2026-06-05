@@ -59,10 +59,10 @@ export default function Footer() {
         <div className={styles.social}>
           <p className={styles.socialLabel}>Redes Sociales</p>
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.socialBtn} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/mnmotorhub/" className={styles.socialBtn} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <IconInstagram />
             </a>
-            <a href="#" className={styles.socialBtn} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61590356652354" className={styles.socialBtn} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <IconFacebook />
             </a>
           </div>

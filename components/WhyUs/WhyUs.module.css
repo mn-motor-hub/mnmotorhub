@@ -3,9 +3,8 @@
 }
 
 .inner {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: var(--spacing-section) var(--spacing-gutter);
+  width: 100%;
+  padding: var(--spacing-section) var(--spacing-edge);
 }
 
 .header {

@@ -50,10 +50,8 @@
 .container {
   position: relative;
   z-index: 2;
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--spacing-gutter);
   width: 100%;
+  padding: 0 var(--spacing-edge);
 }
 
 .content {
