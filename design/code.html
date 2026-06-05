@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#ad897e",
+                        "primary": "#ffb59e",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb59e",
+                        "surface-dim": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#303030",
+                        "on-secondary-container": "#b7b5b4",
+                        "background": "#131313",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "inverse-primary": "#ae3200",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#3a0b00",
+                        "surface-bright": "#3a3939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "outline-variant": "#5c4037",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#e6beb2",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#474746",
+                        "tertiary-container": "#929090",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-tint": "#ffb59e",
+                        "on-tertiary-container": "#2a2a2a",
+                        "primary-container": "#ff571a",
+                        "on-primary-fixed-variant": "#852400",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "tertiary": "#c8c6c5",
+                        "primary-fixed": "#ffdbd0",
+                        "on-error": "#690005",
+                        "on-primary": "#5e1700",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#c8c6c5",
+                        "on-secondary": "#313030",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#521300"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Oswald"],
+                        "headline-lg": ["Oswald"],
+                        "label-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "display-lg": ["Oswald"],
+                        "headline-md": ["Oswald"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .oswald-uppercase {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+        .primary-glow:hover {
+            box-shadow: 0 0 15px rgba(255, 87, 26, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- Section 1: Featured Products Grid -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg oswald-uppercase text-on-surface">PRODUCTOS DESTACADOS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Repuestos de alto rendimiento para tu vehículo</p>
+</div>
+<a class="font-label-bold text-label-bold text-primary-container flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
+                Ver todos <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Product Cards -->
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A high-performance Brembo brake pad set for luxury vehicles, positioned artistically on a dark industrial workbench. The lighting is dramatic and focused, highlighting the metallic textures and the iconic red Brembo logo. The atmosphere is technical and premium, with a deep black background consistent with a high-end automotive garage aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCig7OGwyHsN8SDy_pP4h9Z6lM1vuXHRTrnYEBE3xhB_yi-LXI4A86jmGHKk9riDx3zMQlkKcqXQClitLTUhFKF4M8wMfwvJlOyMOdHot1_nMQJTsg3AvTN-yQ99py4eW0XAx2pYmfk4KInmdZbtv3F44fgN-pMIPhzVRdQn4uPehVKFQW6Ao1l8zbQ3_efY_u1ATo5KygswSH2wNxn5W07GY62qkkQ58v1fXlXQoNWPXgVGnavcC2MioyN_Vu6fus4eyn4csHp6g"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Frenos</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Pastilla de Freno Brembo P06 020</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$28</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A professional-grade K&amp;N automotive air filter displayed against a clean dark backdrop. The texture of the filtration mesh is sharply defined, lit by clinical, high-contrast cool white light. The overall visual style is sleek and performance-oriented, reflecting a precision-engineered automotive part within a modern dark-mode interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuhteZuTBuORNboQc_sSb2HUhrxg0NL9mYDtWCr4chbW6zTakGPSa7WHr64CaQtYmyBmuF5V8woviBgeRAp5kyxst6DepMHOt2N-v4q5Nv1WqrLPq3fLe8JY_MqfuXVtaKaERA2Ya5LTN3GJwpzShnaWMSTAMsDLO8O_cQ5pfWyQ7EK3pilAui9QMph_wd7BfpnOobJpl-ubt5rz-aun6Er4lAmttNfuLupr52LBf2woCHmvzsUmaX01giNgJ8HxIxF7le7vtHWA"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Filtración</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Filtro de Aire K&amp;N 33-2129</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$45</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A Monroe performance shock absorber presented with metallic highlights against a shadowy industrial environment. The steel surfaces glint under a single directional light source, creating a sense of durability and mechanical strength. The color palette is restricted to silvers, blacks, and subtle orange accents, perfectly matching the MN Motor Hub industrial theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsGtDKRHYpD7PcUPpDT9wt1dA-7SctfA1UprpFxYojWrsvdGLvixgZX3VoCjc4xtkGq1a-YkFSF_wDaHk3s_-PusAyyqu3i5dBNUoCgq8CChRSXccx0LzSAltGnACVyssJkKnPuxTMaPjVCAtPTJ4-tskBPuximLQSWunbrj7q3LhN9dn4wsBQo9q8A3pPI3Zomszmj72q6XMX52gPXe5z_icfqSOSho19Mu_kgp6DFuf21Wo6lZjboQqynfdN60_eW-59y3sVbw"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Suspensión</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Amortiguador Monroe GT40</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$89</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A high-precision Bosch brake disc rotor showing detailed machining grooves, shot in a high-contrast macro style. The light catches the circular brushed metal pattern, emphasizing mechanical accuracy. The background is a dark, moody charcoal, reinforcing the premium industrial aesthetic of the automotive performance brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxsbuuFbQ7eEfhQcqB8AAgARHyNCqG8VxD3q4AUVNttDamVdRBuw0jsByg8haaRJxrqDIcuffzCnx58numG6vzlj3r2ifDmMr5cydIuhVGCO8QzbJuOQUozR5GbKx6-hRDO4CMY7_irbstPynu_N9sSXKosiFyIBSQfpSGgi6MSBvR6OAi21pne1SE7OrB7HYyH5OGI6TL9OZHTH_a7GYIea1x57K4vZ2RKpTboiVlRGjNLLZG99Uwh-7r_OsQmTD9jrp4xdy-DA"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Frenos</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Disco de Freno Bosch BD1430</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$34</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="Macro photography of an NGK Iridium spark plug tip showing the precise electrodes. The scene is illuminated by an orange glow reflecting off the ceramic and metal parts, creating a high-performance energy vibe. The surrounding environment is pitch black, focusing all attention on the technical precision of the engine component." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD36ojVmlFSNdjGTlHS-AsdKkInmvHwEpWrUQykHt5WVxaLNtqQIxfnOH8LE8nwiqfFrs0RYHTN2clKz_TERYmsoSTB3adPB2wGrUHTocaVMC6P2CKcSp05Y8HxdI_Zmrq7hSke4WD_toQSoLIISp2rpnhA_P38gSOohXx1v3mEOj8uy4JKS4YDos9q0Cjp_unNUZxOdiykEuywcLD_-vrJvgp-yKqSVbwgjw6NIpC-1GPemQktNeerApM4QN5EECdsQcX_r6gSpw"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Motor</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Bujía NGK Iridium IX</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$12</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A durable Gates timing belt coiled neatly, showing the rugged teeth and fiber-reinforced rubber texture. The lighting is harsh and dramatic, casting deep shadows that emphasize the belt's strength. The style is strictly utilitarian and technical, set within a dark-mode automotive aftermarket context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0A0FnBEU_z9WV82uQj1EHG0o3xdHt8kVifFE0j00I3k1HP7jzjIF9MjJY4NUDH_sKjGR606atm9QpMeCjf4suqbcSbt0gE5GiwjTZ9qHgL6dufaSFirfNKGE2BbmyoMZBpLWbhDc2hymQQPIoebvw1ZKufyykulh9myex346Xcy936dPR57fgNhpWJPPyPtvTaH5wVbu7ACrfybHNpVcojySdgOGw3J9cmivFAV9IeJWNo26m6A6mNvBQt12xzud5T0Jb8-Gwiw"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Motor</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Correa de Distribución Gates T234</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$23</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A Bosch S5 automotive battery with its distinctive silver and blue casing, presented on a dark grey pedestal. The lighting is commercial and clean, highlighting the terminals and technical specifications labels. The overall mood is reliable and powerful, framed within a professional dark industrial UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAIhkmigEU2-GmBJ9PSogkveuy1mqIi68sDj15b47EqZuICuyS-ywNlr_IIyDQ8Bwg9CloSj6-OJq3MobyzjuOlPv_0C7uK2xipQP097sBPri8QjXScu-FtGQH3fxRpS9BYQlT01G1xh-6NiK1hogEvPk6XAOyHDVzD5yDl8aG661CWVk1AU4tAm2UQFyIybCnDP5uo4_SH5PytVKu-hg-J9RNQK5bBsshBA1ZdP5QfUeVgS6L0m0h8-A1bT8CWIeWMBhkgArhmQ"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Eléctrico</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Batería Bosch S5 60Ah</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$95</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+<div class="group flex flex-col bg-surface-container-low rounded-lg overflow-hidden transition-all duration-300 hover:translate-y-[-4px]">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" data-alt="A 4-liter container of Mobil 1 synthetic motor oil, shot with premium product lighting that makes the plastic bottle shine. The background is a dark racetrack environment at dusk, hinting at high-speed performance. The visual style is professional, high-contrast, and deeply saturated in a dark-mode theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOqX82WwjeTYQGJslNN0ClsNYLZyXov7FT_myB2mwqnqXjwmrxDcigX04Bgh0NHZoMSaHIIPZ6KQkP6pFTjB2RA6TqA_EF7FTGsQx0UfRZ31KVUt0Yxwq2rcFbjwUdH0U-a-OdAClLBFj4T18809__LeDi1ivefF5RJLqhYgb2zo4D3pFvVwXthpvIF5uJUkhOQr49g1lW3Yx0k13uQxLBWVEzxo3MwTcPwbxg09BQS74dZ2XBX6eg3-Mn1tiESVcqqe91TOBgkg"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-sm uppercase">Motor</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-[16px] oswald-uppercase text-on-surface line-clamp-2 h-10 mb-2">Aceite Mobil 1 5W-30 4L</h3>
+<p class="font-headline-md text-headline-md text-primary-container font-bold mb-4">$38</p>
+<button class="w-full mt-auto border border-outline py-2 font-label-bold text-label-bold oswald-uppercase text-on-surface hover:bg-surface-variant transition-colors">Ver más</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Why MN Motor Hub -->
+<section class="bg-surface-container-lowest py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Feature 1 -->
+<div class="flex flex-col items-start">
+<div class="w-10 h-0.5 bg-primary-container mb-6"></div>
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">verified</span>
+<h4 class="font-headline-md text-[20px] oswald-uppercase text-on-surface mb-2 tracking-wide">GARANTÍA OEM</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Repuestos originales certificados por fabricante para asegurar el calce perfecto.</p>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col items-start">
+<div class="w-10 h-0.5 bg-primary-container mb-6"></div>
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">inventory_2</span>
+<h4 class="font-headline-md text-[20px] oswald-uppercase text-on-surface mb-2 tracking-wide">STOCK PERMANENTE</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Más de 500 referencias disponibles de inmediato en nuestro almacén central.</p>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col items-start">
+<div class="w-10 h-0.5 bg-primary-container mb-6"></div>
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">headset_mic</span>
+<h4 class="font-headline-md text-[20px] oswald-uppercase text-on-surface mb-2 tracking-wide">ASESORÍA TÉCNICA</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Expertos mecánicos te ayudan a encontrar la pieza correcta para tu modelo exacto.</p>
+</div>
+<!-- Feature 4 -->
+<div class="flex flex-col items-start">
+<div class="w-10 h-0.5 bg-primary-container mb-6"></div>
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-4">local_shipping</span>
+<h4 class="font-headline-md text-[20px] oswald-uppercase text-on-surface mb-2 tracking-wide">ENVÍOS NACIONALES</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Despacho a todo Venezuela en 24-72 horas con las mejores agencias de envío.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: CTA Banner -->
+<section class="bg-surface-container-low border-l-4 border-primary-container py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row justify-between items-center gap-12">
+<div class="w-full lg:w-2/3">
+<span class="font-label-bold text-label-bold text-primary-container tracking-[0.2em] oswald-uppercase">CATÁLOGO COMPLETO</span>
+<h2 class="font-display-lg text-[48px] md:text-display-lg oswald-uppercase text-on-surface mt-4 leading-tight">TODO LO QUE TU MOTOR NECESITA</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6 max-w-xl">Explorá más de 500 referencias con envío a todo Venezuela. Calidad certificada para el máximo rendimiento de tu vehículo.</p>
+</div>
+<div class="w-full lg:w-auto flex flex-col gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-5 font-label-bold text-label-bold oswald-uppercase primary-glow transition-all duration-300 hover:scale-[1.02] active:scale-95 text-[16px]">
+                        VER CATÁLOGO COMPLETO
+                    </button>
+<button class="border border-outline text-on-surface px-8 py-5 font-label-bold text-label-bold oswald-uppercase hover:bg-surface-variant transition-all duration-300 text-[16px]">
+                        CONTACTAR ASESOR
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</body></html>

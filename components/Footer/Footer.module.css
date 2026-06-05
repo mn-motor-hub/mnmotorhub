@@ -1,0 +1,119 @@
+.footer {
+  width: 100%;
+  background-color: var(--color-surface-lowest);
+  border-top: 1px solid var(--color-surface-variant);
+  margin-top: var(--spacing-section);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-gutter);
+  padding: var(--spacing-section) var(--spacing-gutter);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+  max-width: 340px;
+}
+
+.brandName {
+  font-family: var(--font-oswald);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+}
+
+.brandTagline {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-on-surface-variant);
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 48px;
+  row-gap: var(--spacing-base);
+}
+
+.link {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+  transition: color 200ms ease;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.link:focus {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}
+
+.socialLabel {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-surface-variant);
+  color: var(--color-on-surface);
+  border-radius: var(--radius-md);
+  transition: border-color 200ms ease, color 200ms ease;
+}
+
+.socialBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.bottom {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--spacing-gutter) var(--spacing-gutter);
+  border-top: 1px solid rgba(92, 64, 55, 0.3);
+}
+
+.copyright {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdbd0",
+                    "secondary-container": "#474746",
+                    "background": "#131313",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-error": "#690005",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#ff571a",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container": "#201f1f",
+                    "surface-bright": "#3a3939",
+                    "on-background": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary": "#c8c6c5",
+                    "primary": "#ffb59e",
+                    "on-primary": "#5e1700",
+                    "tertiary-fixed": "#e4e2e1",
+                    "inverse-primary": "#ae3200",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#b7b5b4",
+                    "on-secondary": "#313030",
+                    "surface-variant": "#353534",
+                    "primary-fixed-dim": "#ffb59e",
+                    "surface-tint": "#ffb59e",
+                    "outline": "#ad897e",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-container": "#2a2a2a",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#e6beb2",
+                    "on-tertiary": "#303030",
+                    "outline-variant": "#5c4037",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#3a0b00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed-variant": "#852400",
+                    "secondary": "#c8c6c5",
+                    "surface-container-high": "#2a2a2a",
+                    "on-primary-container": "#521300",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#929090"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-padding": "80px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Oswald"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Oswald"],
+                    "headline-lg-mobile": ["Oswald"],
+                    "display-lg": ["Oswald"],
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient-overlay {
+            background: linear-gradient(to right, rgba(13, 13, 13, 0.95) 20%, rgba(13, 13, 13, 0.6) 50%, rgba(13, 13, 13, 0.4) 100%);
+        }
+        .industrial-line {
+            height: 2px;
+            background: linear-gradient(90deg, #ff571a 0%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 bg-background border-b border-surface-variant">
+<nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold uppercase tracking-tighter text-primary">
+                MN Motor Hub
+            </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-bold uppercase tracking-widest transition-all" href="#">Engine</a>
+<a class="text-on-surface font-label-bold uppercase tracking-widest hover:text-primary transition-colors duration-200" href="#">Tires</a>
+<a class="text-on-surface font-label-bold uppercase tracking-widest hover:text-primary transition-colors duration-200" href="#">Lighting</a>
+<a class="text-on-surface font-label-bold uppercase tracking-widest hover:text-primary transition-colors duration-200" href="#">Accessories</a>
+</div>
+<div class="flex items-center gap-base">
+<button class="p-2 text-on-surface hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="p-2 text-on-surface hover:text-primary transition-colors duration-200 relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary-container text-on-primary-container text-[10px] font-bold px-1 rounded-full">3</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<!-- Background Image with Alt Text -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A high-performance automotive workshop scene with a focus on a sleek, matte black motorcycle engine being tuned. The lighting is dramatic and moody, with sharp highlights reflecting off chrome and polished metal surfaces. Industrial sparks and a subtle haze create an energetic, technical atmosphere. The color palette is dominated by deep charcoal blacks and intense high-contrast orange glows from workshop equipment, embodying a premium mechanical precision aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkRJATrMplEq0nGQ3-WclX8NHJMTe-3FVl3ZT4p8Ngmst_HSG6BcNql8BgJjTUv0FlIGaVz_OsoXY5Flf1TFTRDzrDaAKVcKG0ZvgoNLVG_u7u726YFwN4BI-AfqZDusXLmsunSaioD_A6r1DVGPyBB4Lfrij3IvnOiDIFp2Y6eRB0SohGpw5XqZsZ5mr1fyF9INR7PloEcZoSDYS5VxawMqj06ltFDD05lAMgLFov_OT7QNoHhq285wOYCyKN0e-tC3paDKSbNA"/>
+<div class="absolute inset-0 hero-gradient-overlay z-10"></div>
+</div>
+<!-- Content Container -->
+<div class="relative z-20 max-w-container-max mx-auto px-gutter w-full">
+<div class="max-w-2xl">
+<div class="industrial-line w-24 mb-base"></div>
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-on-background mb-gutter uppercase">
+                        Repuestos Originales para el Rendimiento de tu Vehículo
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl">
+                        La mayor variedad de autopartes y accesorios en Venezuela. Calidad profesional garantizada para carros y motos.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-gutter">
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary-container font-headline-md px-10 py-4 uppercase tracking-wider hover:opacity-90 active:scale-95 transition-all shadow-[0px_0px_12px_rgba(255,87,26,0.3)]" href="#">
+                            Ver catálogo
+                        </a>
+<a class="inline-flex items-center justify-center border border-on-surface text-on-surface font-headline-md px-10 py-4 uppercase tracking-wider hover:bg-on-surface/10 active:scale-95 transition-all" href="#">
+                            Contactar Asesor
+                        </a>
+</div>
+<!-- Tech Specs/Trust Badges -->
+<div class="mt-section-padding flex flex-wrap gap-gutter border-t border-surface-variant pt-base opacity-70">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-bold uppercase text-xs">Calidad OEM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-label-bold uppercase text-xs">Envíos Nacionales</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
+<span class="font-label-bold uppercase text-xs">Soporte Técnico</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute bottom-0 right-0 p-gutter hidden lg:block opacity-20 pointer-events-none">
+<span class="font-display-lg text-[120px] leading-none select-none text-outline">HUB</span>
+</div>
+</section>
+<!-- Category Grid (Teaser) -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-background">Categorías Destacadas</h2>
+<p class="text-on-surface-variant font-body-md mt-base">Equipamiento de alto nivel para cada sistema de tu motor</p>
+</div>
+<a class="text-primary font-label-bold uppercase flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                    Explorar todo <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 group relative h-80 bg-surface-container overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro photograph of high-performance disc brakes and red calipers installed on a premium sports car. The lighting is crisp, highlighting the metallic texture of the rotors and the carbon fiber accents. The scene is set in a modern, high-end garage with industrial steel elements and deep shadows that create a professional, technical mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD92N0wKj_REpa5aaV2i6g72GvLoiUpi5bH3Hh4DOW_BmXal8BSHWTRrz1Sbi_3lzMKqHGkHPVpqm-3ier7AI6_Yt6OId_1ZsZ45hGUIOaqHEO97njfa2BSy06Iy28THpdTG3wen7g0yiCA3yWzm0lCVhPOHe6oLXMNEES7zGBdalqhfSdAE7-tqKEowPrY4Tg0TF_BFCrKHTNb4-SvKOGfGgBTnA2l3i9tVAXl9-vDdqH57YlXl2KawONyPdVTPkmA7j5g7Rw62Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-gutter">
+<h3 class="font-headline-md text-headline-md uppercase text-on-background">Sistemas de Frenado</h3>
+<p class="text-primary font-label-bold text-xs uppercase mt-1">Discos, Pastillas y Calipers</p>
+</div>
+</div>
+<!-- Bento Card 2 -->
+<div class="group relative h-80 bg-surface-container overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed shot of a custom performance motorcycle exhaust pipe showing the iridescent heat-tinted titanium colors. The background is a dark, industrial workshop with soft bokeh highlights. The lighting emphasizes the precision welds and premium craftsmanship of the part, aligning with a high-performance engineering aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcHSemcj7Or2n8bVWK9Dd6kikxKyaCpQ_J5grg4QQB2miiS1gkEsUrmcVRcGmiEkdvzkJqcIDRpUPgnE7kPZ6wP1mBwnBILSFLaZL6DY4T9QxVVY3G0QjKMrsvkmUcJywOpF3caOaxi9cPhAmSZt0sn7ViKXAS7U_h1-x09jATd1yi-rZFX4NHwE604d9HJKHl1tGEDhL-CTHI0Mo2qDFW-g2j6srx_Qx8u28QgvD5DNeXUq5_ye4FaBeCupO7qgoPxp8PsuN97g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-gutter">
+<h3 class="font-headline-md text-headline-md uppercase text-on-background">Escape</h3>
+<p class="text-primary font-label-bold text-xs uppercase mt-1">Full Systems &amp; Slip-ons</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-padding border-t border-surface-variant bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-start gap-base py-section-padding px-gutter max-w-container-max mx-auto w-full">
+<div class="flex flex-col gap-base max-w-sm">
+<div class="font-headline-md text-headline-md text-on-surface uppercase font-bold">MN Motor Hub</div>
+<p class="text-on-surface-variant font-body-md">Líderes en la distribución de repuestos automotrices de alto rendimiento en toda Venezuela.</p>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-base mt-gutter md:mt-0">
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors focus:underline" href="#">Contact Us</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors focus:underline" href="#">Shipping Policy</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors focus:underline" href="#">Returns</a>
+<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors focus:underline" href="#">Privacy Policy</a>
+</div>
+<div class="mt-gutter md:mt-0">
+<div class="text-on-surface font-label-bold uppercase mb-base">Redes Sociales</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center border border-surface-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface">share</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-surface-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface">near_me</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-base border-t border-surface-variant/30 text-center md:text-left">
+<p class="text-on-surface-variant font-label-sm">© 2024 MN Motor Hub. Precision Performance. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for hero section
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const heroBg = document.querySelector('.hero-gradient-overlay');
+            if (heroBg) {
+                heroBg.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, transparent 0%, rgba(13, 13, 13, 0.8) 100%)`;
+            }
+        });
+
+        // Hover effect for category cards
+        const cards = document.querySelectorAll('.group');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body></html>
