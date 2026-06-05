@@ -58,13 +58,6 @@
   max-width: 640px;
 }
 
-.industrialLine {
-  height: 2px;
-  width: 96px;
-  background: linear-gradient(90deg, var(--color-primary-container) 0%, transparent 100%);
-  margin-bottom: var(--spacing-base);
-}
-
 .title {
   font-family: var(--font-oswald);
   font-size: 32px;

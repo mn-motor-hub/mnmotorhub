@@ -33,6 +33,7 @@ export default function WhyUs() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
+          <div className="section-accent" />
           <h2 className={styles.title}>ASÍ TRABAJAMOS</h2>
           <p className={styles.subtitle}>
           Repuestos reales. Respuesta inmediata.

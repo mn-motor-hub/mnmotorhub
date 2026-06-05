@@ -6,7 +6,7 @@ export default function CTABanner() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.content}>
-          <div className={styles.industrialLine} />
+          <div className="section-accent" />
           <h2 className={styles.title}>
             Estamos para ayudarte
           </h2>

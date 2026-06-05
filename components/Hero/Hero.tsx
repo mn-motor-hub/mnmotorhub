@@ -28,7 +28,7 @@ export default function Hero() {
 
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.industrialLine} />
+          <div className="section-accent section-accent--hero" />
           <h1 className={styles.title}>
             Repuestos Originales para el Rendimiento de tu Vehículo
           </h1>

@@ -8,6 +8,7 @@ export default function FeaturedProducts() {
     <section className={styles.section}>
       <div className={styles.header}>
         <div>
+          <div className="section-accent" />
           <h2 className={styles.title}>Productos Destacados</h2>
           <p className={styles.subtitle}>Los más buscados por nuestros clientes</p>
         </div>

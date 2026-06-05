@@ -12,6 +12,7 @@ export default function Categories() {
     <section className={styles.section}>
       <div className={styles.header}>
         <div>
+          <div className="section-accent" />
           <h2 className={styles.title}>Categorías Destacadas</h2>
           <p className={styles.subtitle}>
             Equipamiento de alto nivel para cada sistema de tu motor
