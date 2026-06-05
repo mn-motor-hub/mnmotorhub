@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { categories } from '@/lib/mock/categories'
 import styles from './Categories.module.css'
@@ -15,38 +17,44 @@ export default function Categories() {
             Equipamiento de alto nivel para cada sistema de tu motor
           </p>
         </div>
-        <a href="/categorias" className={styles.viewAll}>
+        <Link href="/categorias" className={styles.viewAll}>
           Explorar todo <ArrowRight size={16} />
-        </a>
+        </Link>
       </div>
 
       <div className={styles.bentoGrid}>
         {featured.map((cat) => (
-          <a
+          <Link
             key={cat.id}
             href={`/categoria/${cat.slug}`}
             className={`${styles.card} ${cat.wide ? styles.cardWide : ''}`}
           >
-            <div className={styles.cardBg} />
+            <Image
+              src={cat.imageUrl}
+              alt={cat.name}
+              fill
+              className={styles.cardImage}
+              sizes="(max-width: 767px) 100vw, (max-width: 1279px) 66vw, 853px"
+            />
             <div className={styles.cardGradient} />
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{cat.name}</h3>
               <p className={styles.cardSubtitle}>{cat.subtitle}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
       <div className={styles.secondaryGrid}>
         {rest.map((cat) => (
-          <a
+          <Link
             key={cat.id}
             href={`/categoria/${cat.slug}`}
             className={styles.chip}
           >
             <span className={styles.chipName}>{cat.name}</span>
             <ArrowRight size={14} className={styles.chipArrow} />
-          </a>
+          </Link>
         ))}
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ShoppingCart, User, Menu } from 'lucide-react'
 import styles from './Navbar.module.css'
 
@@ -12,16 +13,16 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <a href="/" className={styles.brand}>
+        <Link href="/" className={styles.brand}>
           MN Motor Hub
-        </a>
+        </Link>
 
         <ul className={styles.links}>
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className={styles.link}>
+              <Link href={link.href} className={styles.link}>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

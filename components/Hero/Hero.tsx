@@ -1,11 +1,28 @@
-import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 import styles from './Hero.module.css'
 
 export default function Hero() {
   return (
     <section className={styles.section}>
       <div className={styles.bgWrapper}>
-        <div className={styles.bgPlaceholder} />
+        <Image
+          src="/images/hero-bg.png"
+          alt="Taller de alto rendimiento con motor de motocicleta siendo ajustado, iluminación dramática con destellos naranjas industriales"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className={`${styles.bgImage} ${styles.bgImageDesktop}`}
+        />
+        <Image
+          src="/images/hero-bg-mobile.png"
+          alt="Taller de alto rendimiento con motor de motocicleta siendo ajustado, iluminación dramática con destellos naranjas industriales"
+          fill
+          priority
+          quality={90}
+          sizes="(max-width: 767px) 100vw, 0px"
+          className={`${styles.bgImage} ${styles.bgImageMobile}`}
+        />
         <div className={styles.overlay} />
       </div>
 

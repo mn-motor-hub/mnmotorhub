@@ -12,18 +12,27 @@
   z-index: 0;
 }
 
-.bgPlaceholder {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-surface-low);
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 40px,
-      rgba(255, 87, 26, 0.03) 40px,
-      rgba(255, 87, 26, 0.03) 41px
-    );
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.bgImageMobile {
+  display: block;
+}
+
+.bgImageDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .bgImageMobile {
+    display: none;
+  }
+
+  .bgImageDesktop {
+    display: block;
+  }
 }
 
 .overlay {
