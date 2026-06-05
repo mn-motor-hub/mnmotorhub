@@ -18,13 +18,13 @@ const pillars = [
     icon: Wrench,
     title: 'Asesoría Técnica',
     description:
-      'Nuestro equipo de mecánicos expertos te ayuda a encontrar exactamente lo que necesitas.',
+      'No te vendemos lo que no necesitas. Si no es tu pieza, te lo decimos. Si lo es, te explicamos por qué..',
   },
   {
     icon: Truck,
     title: 'Envíos Nacionales',
     description:
-      'Llevamos tus repuestos a cualquier ciudad de Venezuela de forma rápida y segura.',
+      'Despachamos a todo Venezuela. Rápido, seguro y con seguimiento real de tu pedido.',
   },
 ]
 
@@ -33,9 +33,9 @@ export default function WhyUs() {
     <section className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2 className={styles.title}>¿Por qué elegirnos?</h2>
+          <h2 className={styles.title}>ASÍ TRABAJAMOS</h2>
           <p className={styles.subtitle}>
-            Más de una década respaldando el rendimiento de tu vehículo
+          Repuestos reales. Respuesta inmediata.
           </p>
         </div>
 

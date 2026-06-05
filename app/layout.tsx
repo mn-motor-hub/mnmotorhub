@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: 'MN Motor Hub — Repuestos Automotrices en Venezuela',
   description:
     'La mayor variedad de autopartes y accesorios en Venezuela. Calidad profesional garantizada para carros y motos.',
+  icons: {
+    icon: [{ url: '/images/logo.png', type: 'image/png' }],
+    apple: '/images/logo.png',
+    shortcut: '/images/logo.png',
+  },
 }
 
 export default function RootLayout({

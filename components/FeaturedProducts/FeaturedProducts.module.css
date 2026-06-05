@@ -90,20 +90,26 @@
 .cardImageLink {
   position: relative;
   display: block;
+  overflow: hidden;
 }
 
 .cardImage {
+  position: relative;
   width: 100%;
   aspect-ratio: 1;
   background-color: var(--color-surface-high);
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 30px,
-      rgba(255, 181, 158, 0.05) 30px,
-      rgba(255, 181, 158, 0.05) 31px
-    );
+  overflow: hidden;
+}
+
+.cardImageImg {
+  object-fit: cover;
+  mix-blend-mode: luminosity;
+  transition: mix-blend-mode 500ms ease, transform 500ms ease;
+}
+
+.card:hover .cardImageImg {
+  mix-blend-mode: normal;
+  transform: scale(1.05);
 }
 
 .cardCategory {

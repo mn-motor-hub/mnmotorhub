@@ -7,7 +7,7 @@ export default function CTABanner() {
       <div className={styles.inner}>
         <div className={styles.industrialLine} />
         <h2 className={styles.title}>
-          ¿No encuentras lo que buscas?
+          Estamos para ayudarte
         </h2>
         <p className={styles.description}>
           Nuestros asesores técnicos están disponibles para ayudarte a encontrar el repuesto exacto para tu vehículo. Consúltanos por WhatsApp.

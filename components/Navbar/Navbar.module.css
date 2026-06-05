@@ -11,25 +11,49 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 88px;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--spacing-gutter);
 }
 
+@media (min-width: 768px) {
+  .nav {
+    height: 96px;
+  }
+}
+
 .brand {
-  font-family: var(--font-oswald);
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brandLogoWrap {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .brandLogoWrap {
+    width: 300px;
+    height: 48px;
+  }
+}
+
+.brandLogo {
+  object-fit: cover;
+  object-position: center;
 }
 
 .links {
   display: none;
   align-items: center;
-  gap: var(--spacing-gutter);
+  gap: 32px;
 }
 
 @media (min-width: 768px) {
@@ -40,12 +64,18 @@
 
 .link {
   font-family: var(--font-inter);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-on-surface);
   transition: color 200ms ease;
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: 16px;
+  }
 }
 
 .link:hover {
@@ -55,7 +85,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-base);
+  gap: 12px;
 }
 
 .iconBtn {
@@ -63,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 10px;
   color: var(--color-on-surface);
   border-radius: var(--radius-md);
   transition: color 200ms ease;
@@ -80,23 +110,23 @@
   background-color: var(--color-primary-container);
   color: var(--color-on-primary-container);
   font-family: var(--font-inter);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   line-height: 1;
-  min-width: 16px;
-  height: 16px;
+  min-width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  padding: 0 3px;
+  padding: 0 4px;
 }
 
 .mobileMenu {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 10px;
   color: var(--color-on-surface);
   transition: color 200ms ease;
 }

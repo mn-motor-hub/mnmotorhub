@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Footer.module.css'
 
@@ -31,7 +32,17 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <Link href="/" className={styles.brandName}>MN Motor Hub</Link>
+          <Link href="/" className={styles.brandName}>
+            <span className={styles.brandLogoWrap}>
+              <Image
+                src="/images/logo-motor-hub.png"
+                alt="MN Motor Hub"
+                fill
+                className={styles.brandLogo}
+                sizes="(max-width: 767px) 220px, 300px"
+              />
+            </span>
+          </Link>
           <p className={styles.brandTagline}>
             Líderes en la distribución de repuestos automotrices de alto rendimiento en toda Venezuela.
           </p>
