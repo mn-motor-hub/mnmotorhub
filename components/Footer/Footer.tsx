@@ -44,7 +44,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className={styles.brandTagline}>
-            Líderes en la distribución de repuestos automotrices de alto rendimiento en toda Venezuela.
+            Repuestos reales para vehículos reales. Desde Venezuela para Venezuela.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <p className={styles.copyright}>
-          © 2025 MN Motor Hub. Precision Performance. Todos los derechos reservados.
+          © 2026 MN Motor Hub. Todos los derechos reservados.
         </p>
       </div>
     </footer>

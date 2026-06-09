@@ -7,21 +7,28 @@ export default function CTABanner() {
       <div className={styles.inner}>
         <div className={styles.content}>
           <div className="section-accent" />
+          <p className={styles.label}>ATENCIÓN PERSONALIZADA</p>
           <h2 className={styles.title}>
-            Estamos para ayudarte
+            ¿NO ENCONTRÁS LA PIEZA?
           </h2>
           <p className={styles.description}>
-            Nuestros asesores técnicos están disponibles para ayudarte a encontrar el repuesto exacto para tu vehículo. Consúltanos por WhatsApp.
+            Escribinos por WhatsApp con el modelo de tu vehículo y te consiguemos lo que necesitás.
           </p>
         </div>
         <div className={styles.actions}>
-          <a href="https://wa.me/584100000000" className={styles.ctaWhatsapp} target="_blank" rel="noopener noreferrer">
-            <MessageCircle size={20} />
-            Consultar por WhatsApp
-          </a>
-          <a href="/catalogo" className={styles.ctaSecondary}>
-            Ver catálogo completo <ArrowRight size={16} />
-          </a>
+          <div className="soon-wrap">
+            <span className="soon-label">Próximamente</span>
+            <a href="#" className={styles.ctaWhatsapp}>
+              <MessageCircle size={20} />
+              Consultar por WhatsApp
+            </a>
+          </div>
+          <div className="soon-wrap">
+            <span className="soon-label">Próximamente</span>
+            <a href="#" className={styles.ctaSecondary}>
+              Ver categorías <ArrowRight size={16} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

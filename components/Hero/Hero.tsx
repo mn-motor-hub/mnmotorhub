@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { BadgeCheck, Truck, Headphones } from 'lucide-react'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -30,33 +31,38 @@ export default function Hero() {
         <div className={styles.content}>
           <div className="section-accent section-accent--hero" />
           <h1 className={styles.title}>
-            Repuestos Originales para el Rendimiento de tu Vehículo
+            TU CLUTCH NO ESPERA.
           </h1>
           <p className={styles.description}>
-            La mayor variedad de autopartes y accesorios en Venezuela. Calidad
-            profesional garantizada para carros y motos.
+            Kits completos y repuestos de mantenimiento con envío a todo Venezuela. Stock real, respuesta inmediata.
           </p>
           <div className={styles.ctas}>
-            <a href="/catalogo" className={styles.ctaPrimary}>
-              Ver catálogo
-            </a>
-            <a href="/contacto" className={styles.ctaSecondary}>
-              Contactar Asesor
-            </a>
+            <div className="soon-wrap">
+              <span className="soon-label">Próximamente</span>
+              <a href="#" className={styles.ctaPrimary}>
+                Ver catálogo
+              </a>
+            </div>
+            <div className="soon-wrap">
+              <span className="soon-label">Próximamente</span>
+              <a href="#" className={styles.ctaSecondary}>
+                Contactar Asesor
+              </a>
+            </div>
           </div>
 
           <div className={styles.trustBadges}>
             <div className={styles.badge}>
-              <span className={styles.badgeIcon}>✓</span>
-              <span className={styles.badgeLabel}>Calidad OEM</span>
+              <BadgeCheck size={18} className={styles.badgeIcon} />
+              <span className={styles.badgeLabel}>Marcas OEM Certificadas</span>
             </div>
             <div className={styles.badge}>
-              <span className={styles.badgeIcon}>🚚</span>
-              <span className={styles.badgeLabel}>Envíos Nacionales</span>
+              <Truck size={18} className={styles.badgeIcon} />
+              <span className={styles.badgeLabel}>Envío a Todo Venezuela</span>
             </div>
             <div className={styles.badge}>
-              <span className={styles.badgeIcon}>⚙</span>
-              <span className={styles.badgeLabel}>Soporte Técnico</span>
+              <Headphones size={18} className={styles.badgeIcon} />
+              <span className={styles.badgeLabel}>Te Asesoramos Gratis</span>
             </div>
           </div>
         </div>

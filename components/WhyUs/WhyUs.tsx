@@ -4,25 +4,25 @@ import styles from './WhyUs.module.css'
 const pillars = [
   {
     icon: ShieldCheck,
-    title: 'Garantía OEM',
+    title: 'PIEZAS QUE ENCAJAN',
     description:
-      'Todos nuestros productos cumplen con los estándares originales del fabricante. Calidad certificada.',
+      'Solo vendemos lo que funciona. Cada repuesto cumple especificaciones originales. Sin sorpresas al instalar.',
   },
   {
     icon: Package,
-    title: 'Stock Permanente',
+    title: 'SI LO BUSCAS, LO TENEMOS',
     description:
-      'Amplio inventario disponible para entrega inmediata. Sin esperas innecesarias.',
+      'Kits de clutch y repuestos de mantenimiento disponibles hoy. No te mandamos a esperar.',
   },
   {
     icon: Wrench,
-    title: 'Asesoría Técnica',
+    title: 'TE DECIMOS LA VERDAD',
     description:
-      'No te vendemos lo que no necesitas. Si no es tu pieza, te lo decimos. Si lo es, te explicamos por qué..',
+      'No te vendemos lo que no necesitas. Si no es tu pieza, te lo decimos. Si lo es, te explicamos por qué.',
   },
   {
     icon: Truck,
-    title: 'Envíos Nacionales',
+    title: 'LLEGA A DONDE ESTÉS',
     description:
       'Despachamos a todo Venezuela. Rápido, seguro y con seguimiento real de tu pedido.',
   },
@@ -30,13 +30,13 @@ const pillars = [
 
 export default function WhyUs() {
   return (
-    <section className={styles.section}>
+    <section id="por-que-nosotros" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
           <div className="section-accent" />
           <h2 className={styles.title}>ASÍ TRABAJAMOS</h2>
           <p className={styles.subtitle}>
-          Repuestos reales. Respuesta inmediata.
+            Familia venezolana. Stock permanente. Sin largas.
           </p>
         </div>
 

@@ -1,13 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ShoppingCart, User, Menu } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import styles from './Navbar.module.css'
 
-const navLinks = [
-  { label: 'Motor', href: '#' },
-  { label: 'Frenos', href: '#' },
-  { label: 'Iluminación', href: '#' },
-  { label: 'Accesorios', href: '#' },
+interface NavLink {
+  label: string
+  href: string
+  target?: string
+  rel?: string
+}
+
+const navLinks: NavLink[] = [
+  { label: 'Productos', href: '#categorias' },
+  { label: '¿Por qué nosotros?', href: '#por-que-nosotros' },
+  { label: 'Contacto', href: 'https://wa.me/584100000000', target: '_blank', rel: 'noopener noreferrer' },
 ]
 
 export default function Navbar() {
@@ -30,21 +36,20 @@ export default function Navbar() {
         <ul className={styles.links}>
           {navLinks.map((link) => (
             <li key={link.label}>
-              <Link href={link.href} className={styles.link}>
+              <a
+                href={link.href}
+                className={styles.link}
+                target={link.target}
+                rel={link.rel}
+              >
                 {link.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
 
         <div className={styles.actions}>
-          <button className={styles.iconBtn} aria-label="Mi cuenta">
-            <User size={24} />
-          </button>
-          <button className={styles.iconBtn} aria-label="Carrito de compras">
-            <ShoppingCart size={24} />
-            <span className={styles.cartBadge}>3</span>
-          </button>
+          {/* Account and cart — activate when auth and e-commerce are ready */}
           <button className={styles.mobileMenu} aria-label="Abrir menú">
             <Menu size={24} />
           </button>

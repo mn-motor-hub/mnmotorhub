@@ -9,18 +9,21 @@ export default function Categories() {
   const rest = categories.filter((c) => !c.featured)
 
   return (
-    <section className={styles.section}>
+    <section id="categorias" className={styles.section}>
       <div className={styles.header}>
         <div>
           <div className="section-accent" />
-          <h2 className={styles.title}>Categorías Destacadas</h2>
+          <h2 className={styles.title}>CATEGORÍAS DESTACADAS</h2>
           <p className={styles.subtitle}>
-            Equipamiento de alto nivel para cada sistema de tu motor
+            Encontrá lo que tu vehículo necesita hoy
           </p>
         </div>
-        <Link href="/categorias" className={styles.viewAll}>
-          Explorar todo <ArrowRight size={16} />
-        </Link>
+        <div className="soon-wrap">
+          <span className="soon-label">Próximamente</span>
+          <Link href="#" className={styles.viewAll}>
+            Explorar todo <ArrowRight size={16} />
+          </Link>
+        </div>
       </div>
 
       <div className={styles.bentoGrid}>
@@ -48,14 +51,13 @@ export default function Categories() {
 
       <div className={styles.secondaryGrid}>
         {rest.map((cat) => (
-          <Link
-            key={cat.id}
-            href={`/categoria/${cat.slug}`}
-            className={styles.chip}
-          >
-            <span className={styles.chipName}>{cat.name}</span>
-            <ArrowRight size={14} className={styles.chipArrow} />
-          </Link>
+          <div key={cat.id} className="soon-wrap">
+            <span className="soon-label">Próximamente</span>
+            <Link href="#" className={styles.chip}>
+              <span className={styles.chipName}>{cat.name}</span>
+              <ArrowRight size={14} className={styles.chipArrow} />
+            </Link>
+          </div>
         ))}
       </div>
     </section>

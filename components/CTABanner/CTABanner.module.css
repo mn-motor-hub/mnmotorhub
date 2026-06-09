@@ -29,6 +29,16 @@
   min-width: 0;
 }
 
+.label {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 8px;
+}
+
 .title {
   font-family: var(--font-oswald);
   font-size: 40px;
