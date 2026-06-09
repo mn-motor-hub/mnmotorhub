@@ -1,0 +1,127 @@
+/* ─── Hero band ─────────────────────────────────────────────── */
+.heroBand {
+  background-color: var(--color-surface-low);
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: 48px var(--spacing-edge);
+}
+
+.heroInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  border-left: 2px solid var(--color-primary-container);
+  padding-left: var(--spacing-gutter);
+}
+
+.heroTitle {
+  font-family: var(--font-oswald);
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+  line-height: 1.1;
+}
+
+@media (max-width: 767px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+}
+
+.heroSubtitle {
+  font-family: var(--font-inter);
+  font-size: 18px;
+  color: var(--color-on-surface-variant);
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* ─── Content wrapper ────────────────────────────────────────── */
+.content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--spacing-section) var(--spacing-edge);
+}
+
+/* ─── Shared content patterns ────────────────────────────────── */
+.section {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-family: var(--font-oswald);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-on-surface);
+  margin-bottom: 16px;
+}
+
+.body {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-on-surface-variant);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-outline-variant);
+  margin: 0 0 48px;
+}
+
+/* ─── Lists ──────────────────────────────────────────────────── */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.listItem {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-on-surface-variant);
+  padding-left: 24px;
+  position: relative;
+}
+
+.listItem::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.orderedList {
+  counter-reset: steps;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.orderedItem {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-on-surface-variant);
+  padding-left: 36px;
+  position: relative;
+  counter-increment: steps;
+}
+
+.orderedItem::before {
+  content: counter(steps) '.';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-container);
+  font-family: var(--font-oswald);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.8;
+}

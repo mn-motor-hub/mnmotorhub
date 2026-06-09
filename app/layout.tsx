@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Oswald, Inter } from 'next/font/google'
+import Navbar from '@/components/Navbar/Navbar'
+import Footer from '@/components/Footer/Footer'
 import '@/styles/globals.css'
 
 const oswald = Oswald({
@@ -34,7 +36,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${oswald.variable} ${inter.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
